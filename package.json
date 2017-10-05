@@ -1,0 +1,17 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "start bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "punk73",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "twit": "^2.2.9",
+    "wordnik": "0.0.2"
+  }
+}
