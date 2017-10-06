@@ -7,7 +7,7 @@ let request = require('request');
 let fs = require('fs');
 
 
-let statuses = [
+var statuses = [
 	'hai aku node js robot',
 	'tugasku membuat tweet otomatis',
 	'aku adalah hasil pembelajaran pemula',
@@ -18,36 +18,37 @@ let statuses = [
 	'dan banyak lagi tweet2 lain yang bisa aku proses'
 ];
 
-let basedUrl = 'http://developer.wordnik.com/v4';
+let basedUrl = 'http://api.wordnik.com/v4';
 let search = '/words.json/search/';
 let q = 'ikan';
 
-
+let api_key = '7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd';
 
 let options = {
-	url : basedUrl+search+q,
-	headers: {
-		api_key: '7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd'
-	}
+	url : basedUrl+ '/words.json/randomWords' + '?api_key=' + api_key	
 }
 
 
 function gotData(error, response, body){
-	fs.appendFile('./file.json', JSON.parse(response) )
-	// console.log(response)
+	// fs.appendFile('./file.json', JSON.stringify({error, response, body}, null, "\t") )
+	sendTweet( JSON.parse(body) );
+	// console.log(body);
 }
 
-request( options , gotData );
-
-/*setInterval(sendTweet, 5*1000 );
 
 //function post a tweet
-function sendTweet(){
+function sendTweet(statuses){
 	
-	let status = statuses[ Math.floor(Math.random() * statuses.length ) ];
+	let status = statuses[0].word;
+	console.log( status )
+
 
 	T.post('statuses/update', { status: status }, function(err, data, response) {
-	  console.log(data.text)
+	  console.log(data.text, 'posted')
 	});
 
-}*/
+}
+
+setInterval( function(){
+	request( options , gotData );
+} , 5 * 1000)

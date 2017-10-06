@@ -1,1 +1,37 @@
-[object Object]
+{
+	"error": null,
+	"response": {
+		"statusCode": 200,
+		"body": "[{\"id\":238656,\"word\":\"activists\"},{\"id\":8123,\"word\":\"anticipatory\"},{\"id\":79201,\"word\":\"countryseat\"},{\"id\":103937,\"word\":\"gneissic\"},{\"id\":129853,\"word\":\"mandom\"},{\"id\":310112,\"word\":\"oxyacetylene\"},{\"id\":183674,\"word\":\"pubic\"},{\"id\":320034,\"word\":\"putted\"},{\"id\":321951,\"word\":\"reawakes\"},{\"id\":189116,\"word\":\"reshipment\"}]",
+		"headers": {
+			"date": "Fri, 06 Oct 2017 17:40:58 GMT",
+			"wordnik-api-version": "4.12.20",
+			"access-control-allow-origin": "*",
+			"access-control-allow-methods": "POST, GET, OPTIONS, PUT, DELETE",
+			"access-control-allow-headers": "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, X-Remote, api_key, auth_token, *",
+			"access-control-request-headers": "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport,  X-Remote, api_key, *",
+			"content-type": "application/json; charset=utf-8",
+			"transfer-encoding": "chunked",
+			"connection": "close"
+		},
+		"request": {
+			"uri": {
+				"protocol": "http:",
+				"slashes": true,
+				"auth": null,
+				"host": "api.wordnik.com",
+				"port": 80,
+				"hostname": "api.wordnik.com",
+				"hash": null,
+				"search": "?api_key=7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd",
+				"query": "api_key=7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd",
+				"pathname": "/v4/words.json/randomWords",
+				"path": "/v4/words.json/randomWords?api_key=7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd",
+				"href": "http://api.wordnik.com/v4/words.json/randomWords?api_key=7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd"
+			},
+			"method": "GET",
+			"headers": {}
+		}
+	},
+	"body": "[{\"id\":238656,\"word\":\"activists\"},{\"id\":8123,\"word\":\"anticipatory\"},{\"id\":79201,\"word\":\"countryseat\"},{\"id\":103937,\"word\":\"gneissic\"},{\"id\":129853,\"word\":\"mandom\"},{\"id\":310112,\"word\":\"oxyacetylene\"},{\"id\":183674,\"word\":\"pubic\"},{\"id\":320034,\"word\":\"putted\"},{\"id\":321951,\"word\":\"reawakes\"},{\"id\":189116,\"word\":\"reshipment\"}]"
+}
