@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
+    "request": "^2.83.0",
     "twit": "^2.2.9",
     "wordnik": "0.0.2"
   }

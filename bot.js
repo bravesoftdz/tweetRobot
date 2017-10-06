@@ -2,12 +2,9 @@ console.log('bot started');
 
 let Twit = require('twit');
 let config = require('./config.js');
-let $ = require('jquery');
-
 let T = new Twit(config);
-
-/*let basedUrl = 'http://developer.wordnik.com/v4';
-let q = 'ikan';*/
+let request = require('request');
+let fs = require('fs');
 
 
 let statuses = [
@@ -21,19 +18,28 @@ let statuses = [
 	'dan banyak lagi tweet2 lain yang bisa aku proses'
 ];
 
+let basedUrl = 'http://developer.wordnik.com/v4';
+let search = '/words.json/search/';
+let q = 'ikan';
 
-// console.log(status);
-/*$.ajax({
-	url: basedUrl + '/search/' + q,
-	success(a,b,c){
-		console.log('success', {a,b,c})
-	},
-	error(){
-		console.log('error')		
+
+
+let options = {
+	url : basedUrl+search+q,
+	headers: {
+		api_key: '7fa8276c9c7757e77a2030024a50a663f2becd2e42cf9b8dd'
 	}
-})*/
+}
 
-setInterval(sendTweet, 5*1000 );
+
+function gotData(error, response, body){
+	fs.appendFile('./file.json', JSON.parse(response) )
+	// console.log(response)
+}
+
+request( options , gotData );
+
+/*setInterval(sendTweet, 5*1000 );
 
 //function post a tweet
 function sendTweet(){
@@ -44,4 +50,4 @@ function sendTweet(){
 	  console.log(data.text)
 	});
 
-}
+}*/
